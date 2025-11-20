@@ -12,7 +12,7 @@ import SwiftData
 struct Tema14SwiftApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Tarea.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,7 @@ struct Tema14SwiftApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListaTareasView()
         }
         .modelContainer(sharedModelContainer)
     }
